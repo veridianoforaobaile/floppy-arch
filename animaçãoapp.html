@@ -9,26 +9,30 @@
 </head>
 <style>
     body {
-  background-image: url('background.png');
-}
-.disquete
-        {
-            position: absolute;
-            top: -200px;
-            left: -500px;
-            animation: engrena 2s infinite linear;
-        }
-         @keyframes engrena
-        {
-            0%   { rotate: 0deg; width: 500%;}
-            
-            100% { rotate: 360deg;width: 0%;  }
-        }
-
-</style>
+        background-image: url(fundo.png);
+        background-size: 100%;
+        overflow: hidden;
+    }
+    .disquete {
+        position: absolute;
+        top: 50%; 
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: engrena 4s forwards;
+        width: 200%;
+    }
+    @keyframes engrena {
+        0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+        100% { transform: translate(-50%, -50%) rotate(360deg) scale(0); }
+    }
+    </style>
 <body>
-    <img src="disquete.png" class="disquete">
-   
+    
+    
+    
+    <div class="disquete">
+        <img src="disquete.png" class="disquete">
+    </div>
     
 </body>
 </html>
