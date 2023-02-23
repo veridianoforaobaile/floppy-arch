@@ -8,10 +8,23 @@
     
 </head>
 <style>
-    body {
-        background-image: url(fundo.png);
-        background-size: 100%;
+    body{
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: 100vh;
         overflow: hidden;
+    }
+   .fundo {
+        animation: animafundo 1s forwards;
+        animation-delay: 1s;
+        opacity: 0;
+        background-image: url("fundo.png");
+        background-size: 100%;
+        width: 100%;
+        height: 100vh;
+        z-index: 0;
+        
     }
     .disquete {
         position: absolute;
@@ -20,6 +33,7 @@
         transform: translate(-50%, -50%);
         animation: engrena 4s forwards;
         width: 200%;
+        z-index: 1;
     }
     @keyframes engrena {
         0% { transform: translate(-50%, -50%) rotate(0deg) scale(0); }
@@ -27,6 +41,10 @@
         100% { transform: translate(-50%, -50%) rotate(0deg) scale(0); }
         
         
+    }
+    @keyframes animafundo {
+        0% { opacity: 0;}
+        100% { opacity: 1;}
     }
     </style>
 <body>
@@ -36,6 +54,7 @@
     <div class="disquete">
         <img src="disquete.png" class="disquete">
     </div>
+    <div class="fundo"></div>
     
 </body>
 </html>
